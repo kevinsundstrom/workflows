@@ -13,11 +13,11 @@ jobs:
       CONFIG_VARIABLE: 'This is a config variable.'
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Print masked secret
-      run: echo "My Masked Secret: ${{ secrets.MY_MASKED_SECRET }}"
+      - name: Print masked secret
+        run: echo "My Masked Secret: ${{ secrets.MY_MASKED_SECRET }}"
 
-    - name: Print config variable
-      run: echo "My Config Variable: ${{ env.CONFIG_VARIABLE }}"
+      - name: Print config variable
+        run: echo "My Config Variable: ${{ env.CONFIG_VARIABLE }}"
